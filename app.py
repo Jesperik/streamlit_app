@@ -109,7 +109,7 @@ def display_plot(app):
             tab1, tab2, tab3 = st.tabs(["Data", "Stats", "List"])
             with tab1:
                 fig = app.plot_data(st.session_state.stock)
-                st.plotly_chart(fig)  #, use_container_width=True
+                st.plotly_chart(fig)
             with tab2:
                 col1, col2, col3 = st.columns(3)
                 col1.metric(label="Max", value=f"{app.stock_stats['max']} USD", delta=f"{round(app.stock_stats['max']-app.stock_stats['avg'], 1)} USD above average")
